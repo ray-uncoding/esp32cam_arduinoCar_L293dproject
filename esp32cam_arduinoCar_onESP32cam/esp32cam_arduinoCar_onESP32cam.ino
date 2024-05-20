@@ -1,6 +1,6 @@
 /*
 檔案名：esp32cam_arduinoCar_onESP32cam
-更新時間：2024/05/18
+更新時間：2024/05/20
 功能簡介：
   目的：建立一個esp32 cam 的 I2C 主機, 並且傳訊息給地址0x39的從機, 預設從機為arduino uno, 傳輸訊息為以下步驟：
       1. esp32 cam 傳輸 " key value "  給 0x39位置的arduino uno
@@ -26,6 +26,8 @@
     11. 如果你接上電源後發現無法操作, 試試看拔掉 pin A4 (sda) pin A5 (scl) 再重插
     12. 永遠確保你的電源供應系統分成給馬達和給arduino esp32cam, 不然容易掛掉
     13. 手機擺橫後記得鎖轉向
+
+    新增檔案esp32cam_arduinoCar_onESP32cam_cameraVer 改成使用這個檔案時, 遙控器變成直式排版, 並且新增鏡頭
 */
 #include <WiFi.h>
 #include <ESPAsyncWebServer.h>
