@@ -10,6 +10,14 @@
       pin 12 (sda)    ->      pin A4 (sda)
       pin 13 (scl)    ->      pin A5 (scl)
       pin GND         ->      pin GND
+      
+      L296D
+      M1 M2 -> Right
+      M3 M4 -> Left
+
+      pin9  -> Servo 9
+      pin10 -> Servo 10
+      
       其餘接電自行處理, 記得確保系統工作在5V     
 
   備註：(1~7是給有需要燒錄或修改程式碼的開發者看的, 一般使用者直接從第8項開始看)
@@ -192,13 +200,13 @@ void receiveEvent() {
 }
 
 void requestEvent() {
-  int data = 216;
+  int data = 216; //test data
   Wire.write("hi");
   Wire.write(highByte(data));  
   Wire.write(lowByte(data)); 
 }
 
-void chang(int &x, int value_1, int &y, int value_2){
+void chang(int &x, int value_1, int &y, int value_2){ //會單獨寫出來是因為I2C打斷機制的問題
   x = value_1;
   y = value_2;
 }
