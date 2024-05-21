@@ -3,7 +3,7 @@
 **Last Updated**: May 18, 2024
 
 ## Project Description
-### Objective
+### Purpose 
 Set up an ESP32-CAM as an I2C master to communicate with an Arduino Uno slave at address 0x39. The communication involves the following steps:
 1. ESP32-CAM sends "key value" to the Arduino at address 0x39.
 2. Arduino Uno receives the command, prints each byte of data until it encounters a `\n`, and controls the movements of four DC motors and two servo motors based on the received data.
